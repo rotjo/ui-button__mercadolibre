@@ -38,6 +38,9 @@
                       transform: scale(70); } }
 
                       .ui-button {
+                  -webkit-appearance: none;
+                     -moz-appearance: none;
+                          appearance: none;
                   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
                   -webkit-border-radius: 4px;
                           border-radius: 4px;
@@ -50,14 +53,18 @@
                   padding: 12px;
                   text-align: center;
                   width: 100%;
-                  -webkit-appearance: none;
-                     -moz-appearance: none;
-                          appearance: none;
                   outline: 0;
+                  -ms-touch-action: manipulation;
+                      touch-action: manipulation;
                   -webkit-tap-highlight-color: transparent;
                   -webkit-tap-highlight-color: transparent;
                   -webkit-transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in;
                   transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in; }
+
+                .ui-button--small {
+                  font-size: 14px;
+                  min-width: 108;
+                  padding: 8px; }
 
                 .ui-button--primary {
                   background: #3483fa; }
@@ -87,29 +94,6 @@
                   .ui-button--tertiary:focus {
                     color: rgba(52, 131, 250, 0.65); }
                   .ui-button--tertiary:hover {
-                    color: rgba(52, 131, 250, 0.65); }
-
-                .ui-button-modal {
-                  font-size: 14px;
-                  font-weight: 300;
-                  padding: 8px; }
-
-                .ui-button-modal--primary {
-                  background: #3483fa; }
-                  .ui-button-modal--primary, .ui-button-modal--primary:link, .ui-button-modal--primary:visited {
-                    color: #fff; }
-                  .ui-button-modal--primary:focus {
-                    background: rgba(52, 131, 250, 0.8); }
-                  .ui-button-modal--primary:hover {
-                    background: rgba(52, 131, 250, 0.8); }
-
-                .ui-button-modal--tertiary {
-                  background: none; }
-                  .ui-button-modal--tertiary, .ui-button-modal--tertiary:link, .ui-button-modal--tertiary:visited {
-                    color: #3483fa; }
-                  .ui-button-modal--tertiary:focus {
-                    color: rgba(52, 131, 250, 0.65); }
-                  .ui-button-modal--tertiary:hover {
                     color: rgba(52, 131, 250, 0.65); }
 
                 .ui-button--disabled {
