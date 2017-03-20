@@ -95,8 +95,8 @@
 
                 .ui-button--disabled {
                   background-color: rgba(102, 102, 102, 0.3);
-                  color: #fff;
-                  cursor: not-allowed; }
+                  color: rgba(255, 255, 255, 0.7);
+                  cursor: auto; }
 
                 .ui-button.ui-button--primary,
                 .ui-button.ui-button-modal--primary {
@@ -127,16 +127,14 @@
                             animation: ripple 0.5s ease-out; }
 
                 .ui-button.ui-button--secondary,
-                .ui-button.ui-button--tertiary,
-                .ui-button.ui-button-modal--tertiary {
+                .ui-button.ui-button--tertiary {
                   position: relative;
                   overflow: hidden;
                   -webkit-transform: translateZ(0);
                           transform: translateZ(0);
                   will-change: transform; }
                   .ui-button.ui-button--secondary:after,
-                  .ui-button.ui-button--tertiary:after,
-                  .ui-button.ui-button-modal--tertiary:after {
+                  .ui-button.ui-button--tertiary:after {
                     content: '';
                     position: absolute;
                     left: 50%;
@@ -152,8 +150,7 @@
                             transform: scale(0);
                     z-index: -1; }
                   .ui-button.ui-button--secondary:not(:active):after,
-                  .ui-button.ui-button--tertiary:not(:active):after,
-                  .ui-button.ui-button-modal--tertiary:not(:active):after {
+                  .ui-button.ui-button--tertiary:not(:active):after {
                     -webkit-animation: ripple 0.5s ease-out;
                             animation: ripple 0.5s ease-out; }
 
