@@ -38,121 +38,125 @@
                       transform: scale(70); } }
 
                       .ui-button {
-                    -webkit-appearance: none;
-                       -moz-appearance: none;
-                            appearance: none;
-                    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
-                    -webkit-border-radius: 4px;
-                            border-radius: 4px;
-                    border: 0;
-                    cursor: pointer;
-                    display: block;
-                    font-size: 18px;
-                    font-weight: 300;
-                    margin: 0;
-                    padding: 12px;
-                    text-align: center;
-                    width: 100%;
-                    outline: 0;
-                    -webkit-tap-highlight-color: transparent;
-                    -webkit-tap-highlight-color: transparent;
-                    -webkit-transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in;
-                    transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in; }
+                        -webkit-appearance: none;
+                           -moz-appearance: none;
+                                appearance: none;
+                        font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
+                        -webkit-border-radius: 4px;
+                                border-radius: 4px;
+                        border: 0;
+                        cursor: pointer;
+                        display: block;
+                        line-height: 18px;
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin: 0;
+                        padding: 12px;
+                        text-align: center;
+                        width: 100%;
+                        outline: 0;
+                        -webkit-tap-highlight-color: transparent;
+                        -webkit-tap-highlight-color: transparent;
+                        -webkit-transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in;
+                        transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in; }
 
-                  .ui-button--small {
-                    font-size: 14px;
-                    padding: 8px; }
+                      .ui-button--small {
+                        font-size: 14px;
+                        padding: 8px; }
 
-                  .ui-button--primary {
-                    background: #3483fa; }
-                    .ui-button--primary, .ui-button--primary:link, .ui-button--primary:visited {
-                      color: #fff; }
-                    .ui-button--primary:focus {
-                      background: rgba(52, 131, 250, 0.8); }
-                    .ui-button--primary:hover {
-                      background: rgba(52, 131, 250, 0.8); }
+                      .ui-button--primary {
+                        background: #3483fa;
+                        border: 1px solid #3483fa; }
+                        .ui-button--primary, .ui-button--primary:link, .ui-button--primary:visited {
+                          color: #fff; }
+                        .ui-button--primary:focus {
+                          background: rgba(52, 131, 250, 0.8);
+                          border: 1px solid transparent; }
+                        .ui-button--primary:hover {
+                          background: rgba(52, 131, 250, 0.8);
+                          border: 1px solid transparent; }
 
-                  .ui-button--secondary {
-                    background: none;
-                    border: 1px solid #3483fa; }
-                    .ui-button--secondary, .ui-button--secondary:link, .ui-button--secondary:visited {
-                      color: #3483fa; }
-                    .ui-button--secondary:focus {
-                      color: rgba(52, 131, 250, 0.65);
-                      border: 1px solid rgba(52, 131, 250, 0.65); }
-                    .ui-button--secondary:hover {
-                      color: rgba(52, 131, 250, 0.65);
-                      border: 1px solid rgba(52, 131, 250, 0.65); }
+                      .ui-button--secondary {
+                        background: none;
+                        border: 1px solid #3483fa; }
+                        .ui-button--secondary, .ui-button--secondary:link, .ui-button--secondary:visited {
+                          color: #3483fa; }
+                        .ui-button--secondary:focus {
+                          color: rgba(52, 131, 250, 0.65);
+                          border: 1px solid rgba(52, 131, 250, 0.65); }
+                        .ui-button--secondary:hover {
+                          color: rgba(52, 131, 250, 0.65);
+                          border: 1px solid rgba(52, 131, 250, 0.65); }
 
-                  .ui-button--tertiary {
-                    background: none; }
-                    .ui-button--tertiary, .ui-button--tertiary:link, .ui-button--tertiary:visited {
-                      color: #3483fa; }
-                    .ui-button--tertiary:focus {
-                      color: rgba(52, 131, 250, 0.65); }
-                    .ui-button--tertiary:hover {
-                      color: rgba(52, 131, 250, 0.65); }
+                      .ui-button--tertiary {
+                        background: none; }
+                        .ui-button--tertiary, .ui-button--tertiary:link, .ui-button--tertiary:visited {
+                          color: #3483fa; }
+                        .ui-button--tertiary:focus {
+                          color: rgba(52, 131, 250, 0.65); }
+                        .ui-button--tertiary:hover {
+                          color: rgba(52, 131, 250, 0.65); }
 
-                  .ui-button--disabled {
-                    background-color: rgba(102, 102, 102, 0.3);
-                    color: rgba(255, 255, 255, 0.6);
-                    cursor: auto; }
+                      .ui-button--disabled {
+                        background-color: rgba(102, 102, 102, 0.3);
+                        color: rgba(255, 255, 255, 0.6);
+                        cursor: auto; }
 
-                  .ui-button.ui-button--primary,
-                  .ui-button.ui-button-modal--primary {
-                    position: relative;
-                    overflow: hidden;
-                    -webkit-transform: translateZ(0);
-                            transform: translateZ(0);
-                    will-change: transform; }
-                    .ui-button.ui-button--primary:after,
-                    .ui-button.ui-button-modal--primary:after {
-                      content: '';
-                      position: absolute;
-                      left: 50%;
-                      top: 50%;
-                      width: 4px;
-                      height: 4px;
-                      background: #000;
-                      -webkit-border-radius: 50%;
-                              border-radius: 50%;
-                      opacity: 0.3;
-                      -webkit-transform: scale(0);
-                          -ms-transform: scale(0);
-                              transform: scale(0);
-                      z-index: -1; }
-                    .ui-button.ui-button--primary:not(:active):after,
-                    .ui-button.ui-button-modal--primary:not(:active):after {
-                      -webkit-animation: ripple 0.5s ease-out;
-                              animation: ripple 0.5s ease-out; }
+                      .ui-button.ui-button--primary,
+                      .ui-button.ui-button-modal--primary {
+                        position: relative;
+                        overflow: hidden;
+                        -webkit-transform: translateZ(0);
+                                transform: translateZ(0);
+                        will-change: transform; }
+                        .ui-button.ui-button--primary:after,
+                        .ui-button.ui-button-modal--primary:after {
+                          content: '';
+                          position: absolute;
+                          left: 50%;
+                          top: 50%;
+                          width: 4px;
+                          height: 4px;
+                          background: #000;
+                          -webkit-border-radius: 50%;
+                                  border-radius: 50%;
+                          opacity: 0.3;
+                          -webkit-transform: scale(0);
+                              -ms-transform: scale(0);
+                                  transform: scale(0);
+                          z-index: -1; }
+                        .ui-button.ui-button--primary:not(:active):after,
+                        .ui-button.ui-button-modal--primary:not(:active):after {
+                          -webkit-animation: ripple 0.5s ease-out;
+                                  animation: ripple 0.5s ease-out; }
 
-                  .ui-button.ui-button--secondary,
-                  .ui-button.ui-button--tertiary {
-                    position: relative;
-                    overflow: hidden;
-                    -webkit-transform: translateZ(0);
-                            transform: translateZ(0);
-                    will-change: transform; }
-                    .ui-button.ui-button--secondary:after,
-                    .ui-button.ui-button--tertiary:after {
-                      content: '';
-                      position: absolute;
-                      left: 50%;
-                      top: 50%;
-                      width: 4px;
-                      height: 4px;
-                      background: #3483fa;
-                      -webkit-border-radius: 50%;
-                              border-radius: 50%;
-                      opacity: 0.3;
-                      -webkit-transform: scale(0);
-                          -ms-transform: scale(0);
-                              transform: scale(0);
-                      z-index: -1; }
-                    .ui-button.ui-button--secondary:not(:active):after,
-                    .ui-button.ui-button--tertiary:not(:active):after {
-                      -webkit-animation: ripple 0.5s ease-out;
-                              animation: ripple 0.5s ease-out; }
+                      .ui-button.ui-button--secondary,
+                      .ui-button.ui-button--tertiary {
+                        position: relative;
+                        overflow: hidden;
+                        -webkit-transform: translateZ(0);
+                                transform: translateZ(0);
+                        will-change: transform; }
+                        .ui-button.ui-button--secondary:after,
+                        .ui-button.ui-button--tertiary:after {
+                          content: '';
+                          position: absolute;
+                          left: 50%;
+                          top: 50%;
+                          width: 4px;
+                          height: 4px;
+                          background: #3483fa;
+                          -webkit-border-radius: 50%;
+                                  border-radius: 50%;
+                          opacity: 0.3;
+                          -webkit-transform: scale(0);
+                              -ms-transform: scale(0);
+                                  transform: scale(0);
+                          z-index: -1; }
+                        .ui-button.ui-button--secondary:not(:active):after,
+                        .ui-button.ui-button--tertiary:not(:active):after {
+                          -webkit-animation: ripple 0.5s ease-out;
+                                  animation: ripple 0.5s ease-out; }
 
       .app {
 
