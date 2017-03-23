@@ -157,6 +157,19 @@
                           -webkit-animation: ripple 0.5s ease-out;
                                   animation: ripple 0.5s ease-out; }
 
+                @media (min-width: 768px) {
+                  .ui-button {
+                    display: inline-block;
+                    width: auto;
+                    padding: 14px 24px;
+                    min-width: 142px; }
+                  .ui-button--small {
+                    display: inline-block;
+                    width: auto;
+                    padding: 8px;
+                    min-width: 108px; }
+                }
+
       .app {
 
       }
@@ -221,7 +234,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       }
 
-      .other-buttons .ui-button.ui-button-modal {
+      .other-buttons .ui-button.ui-button--small {
           display: inline-block;
           margin: 0 5px;
           width: auto;
@@ -246,8 +259,8 @@
           <div class="b-disabled">
             <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
           </div>
-          <button class="ui-button ui-button-modal ui-button-modal--primary">Botón modal</button>
-          <button class="ui-button ui-button-modal ui-button-modal--tertiary">Boton modal</button>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--primary">Boton small</button>
         </div>
       </div>
       <div class="container container__white">
@@ -264,8 +277,8 @@
           <div class="b-disabled">
             <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
           </div>
-          <button class="ui-button ui-button-modal ui-button-modal--primary">Botón modal</button>
-          <button class="ui-button ui-button-modal ui-button-modal--tertiary">Boton modal</button>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--primary">Boton small</button>
         </div>
       </div>
       <div class="container container__yellow">
@@ -282,8 +295,8 @@
           <div class="b-disabled">
             <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
           </div>
-          <button class="ui-button ui-button-modal ui-button-modal--primary">Botón modal</button>
-          <button class="ui-button ui-button-modal ui-button-modal--tertiary">Boton modal</button>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--primary">Boton small</button>
         </div>
       </div>
     </div>
