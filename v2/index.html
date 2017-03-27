@@ -15,33 +15,49 @@
 
         @-webkit-keyframes ripple-large {
           0% {
+            opacity: 0.3;
             -webkit-transform: translate(-50%, -50%) scale(0);
                     transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
           100% {
+            opacity: 0;
             -webkit-transform: translate(-50%, -50%) scale(3);
                     transform: translate(-50%, -50%) scale(3); } }
 
         @keyframes ripple-large {
           0% {
+            opacity: 0.3;
             -webkit-transform: translate(-50%, -50%) scale(0);
                     transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
           100% {
+            opacity: 0;
             -webkit-transform: translate(-50%, -50%) scale(3);
                     transform: translate(-50%, -50%) scale(3); } }
 
         @-webkit-keyframes ripple-small {
           0% {
+            opacity: 0.3;
             -webkit-transform: translate(-50%, -50%) scale(0);
                     transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
           100% {
+            opacity: 0;
             -webkit-transform: translate(-50%, -50%) scale(3);
                     transform: translate(-50%, -50%) scale(3); } }
 
         @keyframes ripple-small {
           0% {
+            opacity: 0.3;
             -webkit-transform: translate(-50%, -50%) scale(0);
                     transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
           100% {
+            opacity: 0;
             -webkit-transform: translate(-50%, -50%) scale(3);
                     transform: translate(-50%, -50%) scale(3); } }
 
@@ -76,8 +92,7 @@
                       background: #3483fa;
                       border: 1px solid #3483fa; }
                       .ui-button--primary, .ui-button--primary:link, .ui-button--primary:visited {
-                        color: #fff;
-                        border: 1px solid transparent; }
+                        color: #fff; }
                       .ui-button--primary:focus {
                         background: rgba(52, 131, 250, 0.8);
                         border: 1px solid transparent; }
@@ -98,17 +113,13 @@
                         border: 1px solid rgba(52, 131, 250, 0.65); }
 
                     .ui-button--tertiary {
-                      background: none;
-                      border: 1px solid transparent; }
+                      background: none; }
                       .ui-button--tertiary, .ui-button--tertiary:link, .ui-button--tertiary:visited {
-                        color: #3483fa;
-                        border: 1px solid transparent; }
+                        color: #3483fa; }
                       .ui-button--tertiary:focus {
-                        color: rgba(52, 131, 250, 0.65);
-                        border: 1px solid transparent; }
+                        color: rgba(52, 131, 250, 0.65); }
                       .ui-button--tertiary:hover {
-                        color: rgba(52, 131, 250, 0.65);
-                        border: 1px solid transparent; }
+                        color: rgba(52, 131, 250, 0.65); }
 
                     .ui-button--disabled {
                       background-color: rgba(52, 131, 250, 0.3);
@@ -139,9 +150,7 @@
                         z-index: -1; }
                       .ui-button.ui-button--primary:not(:active):after {
                         -webkit-animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
-                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
-                        -webkit-transition: opacity 1s ease;
-                        transition: opacity 1s ease; }
+                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1); }
 
                     .ui-button.ui-button--secondary,
                     .ui-button.ui-button--tertiary {
@@ -169,9 +178,7 @@
                       .ui-button.ui-button--secondary:not(:active):after,
                       .ui-button.ui-button--tertiary:not(:active):after {
                         -webkit-animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
-                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
-                        -webkit-transition: opacity 1s ease;
-                        transition: opacity 1s ease; }
+                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1); }
 
                     .ui-button.ui-button--small.ui-button--primary {
                       position: relative;
@@ -196,9 +203,7 @@
                         z-index: -1; }
                       .ui-button.ui-button--small.ui-button--primary:not(:active):after {
                         -webkit-animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
-                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
-                        -webkit-transition: opacity 1s ease;
-                        transition: opacity 1s ease; }
+                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1); }
 
                     .ui-button.ui-button--small.ui-button--tertiary {
                       position: relative;
@@ -223,9 +228,7 @@
                         z-index: -1; }
                       .ui-button.ui-button--small.ui-button--tertiary:not(:active):after {
                         -webkit-animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
-                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
-                        -webkit-transition: opacity 1s ease;
-                        transition: opacity 1s ease; }
+                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1); }
                 @media (min-width: 768px) {
                   .ui-button {
                     display: inline-block;
