@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">﻿
+    <link href="https://ui.mlstatic.com/webfonts/v3.0.0/proxima-nova/300-400-500-600-700.woff2.css" rel="stylesheet"/>
+
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @-webkit-keyframes ripple-large {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate(-50%, -50%) scale(0);
+                    transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
+          100% {
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%) scale(3);
+                    transform: translate(-50%, -50%) scale(3); } }
+
+        @keyframes ripple-large {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate(-50%, -50%) scale(0);
+                    transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
+          100% {
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%) scale(3);
+                    transform: translate(-50%, -50%) scale(3); } }
+
+        @-webkit-keyframes ripple-small {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate(-50%, -50%) scale(0);
+                    transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
+          100% {
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%) scale(3);
+                    transform: translate(-50%, -50%) scale(3); } }
+
+        @keyframes ripple-small {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate(-50%, -50%) scale(0);
+                    transform: translate(-50%, -50%) scale(0); }
+          50% {
+            opacity: 0.1; }
+          100% {
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%) scale(3);
+                    transform: translate(-50%, -50%) scale(3); } }
+
+                    .ui-button {
+                      -webkit-appearance: none;
+                         -moz-appearance: none;
+                              appearance: none;
+                      font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
+                      -webkit-border-radius: 4px;
+                              border-radius: 4px;
+                      border: 0;
+                      cursor: pointer;
+                      display: block;
+                      line-height: 18px;
+                      font-size: 18px;
+                      font-weight: 300;
+                      margin: 0;
+                      padding: 12px;
+                      text-align: center;
+                      width: 100%;
+                      outline: 0;
+                      -webkit-tap-highlight-color: transparent;
+                      -webkit-tap-highlight-color: transparent;
+                      -webkit-transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in;
+                      transition: background 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in; }
+
+                    .ui-button--small {
+                      font-size: 14px;
+                      padding: 8px; }
+
+                    .ui-button--primary {
+                      background: #3483fa;
+                      border: 1px solid #3483fa; }
+                      .ui-button--primary, .ui-button--primary:link, .ui-button--primary:visited {
+                        color: #fff; }
+                      .ui-button--primary:focus {
+                        background: rgba(52, 131, 250, 0.8);
+                        border: 1px solid transparent; }
+                      .ui-button--primary:hover {
+                        background: rgba(52, 131, 250, 0.8);
+                        border: 1px solid transparent; }
+
+                    .ui-button--secondary {
+                      background: none;
+                      border: 1px solid #3483fa; }
+                      .ui-button--secondary, .ui-button--secondary:link, .ui-button--secondary:visited {
+                        color: #3483fa; }
+                      .ui-button--secondary:focus {
+                        color: rgba(52, 131, 250, 0.65);
+                        border: 1px solid rgba(52, 131, 250, 0.65); }
+                      .ui-button--secondary:hover {
+                        color: rgba(52, 131, 250, 0.65);
+                        border: 1px solid rgba(52, 131, 250, 0.65); }
+
+                    .ui-button--tertiary {
+                      background: none; }
+                      .ui-button--tertiary, .ui-button--tertiary:link, .ui-button--tertiary:visited {
+                        color: #3483fa; }
+                      .ui-button--tertiary:focus {
+                        color: rgba(52, 131, 250, 0.65); }
+                      .ui-button--tertiary:hover {
+                        color: rgba(52, 131, 250, 0.65); }
+
+                    .ui-button--disabled {
+                      background-color: rgba(52, 131, 250, 0.3);
+                      border: 1px solid transparent;
+                      color: rgba(255, 255, 255, 0.6);
+                      cursor: auto; }
+
+                    .ui-button.ui-button--primary {
+                      position: relative;
+                      overflow: hidden;
+                      -webkit-transform: translateZ(0);
+                              transform: translateZ(0);
+                      will-change: transform; }
+                      .ui-button.ui-button--primary:after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 100px;
+                        height: 100px;
+                        background: #000;
+                        -webkit-border-radius: 50%;
+                                border-radius: 50%;
+                        opacity: 0.3;
+                        -webkit-transform: translate(-50%, -50%) scale(0);
+                            -ms-transform: translate(-50%, -50%) scale(0);
+                                transform: translate(-50%, -50%) scale(0);
+                        z-index: -1; }
+                      .ui-button.ui-button--primary:not(:active):after {
+                        -webkit-animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
+                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1); }
+
+                    .ui-button.ui-button--secondary,
+                    .ui-button.ui-button--tertiary {
+                      position: relative;
+                      overflow: hidden;
+                      -webkit-transform: translateZ(0);
+                              transform: translateZ(0);
+                      will-change: transform; }
+                      .ui-button.ui-button--secondary:after,
+                      .ui-button.ui-button--tertiary:after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 100px;
+                        height: 100px;
+                        background: #3483fa;
+                        -webkit-border-radius: 50%;
+                                border-radius: 50%;
+                        opacity: 0.3;
+                        -webkit-transform: translate(-50%, -50%) scale(0);
+                            -ms-transform: translate(-50%, -50%) scale(0);
+                                transform: translate(-50%, -50%) scale(0);
+                        z-index: -1; }
+                      .ui-button.ui-button--secondary:not(:active):after,
+                      .ui-button.ui-button--tertiary:not(:active):after {
+                        -webkit-animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1);
+                                animation: ripple-large 0.6s cubic-bezier(0, 0, 0.4, 1); }
+
+                    .ui-button.ui-button--small.ui-button--primary {
+                      position: relative;
+                      overflow: hidden;
+                      -webkit-transform: translateZ(0);
+                              transform: translateZ(0);
+                      will-change: transform; }
+                      .ui-button.ui-button--small.ui-button--primary:after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 50px;
+                        height: 50px;
+                        background: #000;
+                        -webkit-border-radius: 50%;
+                                border-radius: 50%;
+                        opacity: 0.3;
+                        -webkit-transform: translate(-50%, -50%) scale(0);
+                            -ms-transform: translate(-50%, -50%) scale(0);
+                                transform: translate(-50%, -50%) scale(0);
+                        z-index: -1; }
+                      .ui-button.ui-button--small.ui-button--primary:not(:active):after {
+                        -webkit-animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
+                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1); }
+
+                    .ui-button.ui-button--small.ui-button--tertiary {
+                      position: relative;
+                      overflow: hidden;
+                      -webkit-transform: translateZ(0);
+                              transform: translateZ(0);
+                      will-change: transform; }
+                      .ui-button.ui-button--small.ui-button--tertiary:after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 50px;
+                        height: 50px;
+                        background: #3483fa;
+                        -webkit-border-radius: 50%;
+                                border-radius: 50%;
+                        opacity: 0.3;
+                        -webkit-transform: translate(-50%, -50%) scale(0);
+                            -ms-transform: translate(-50%, -50%) scale(0);
+                                transform: translate(-50%, -50%) scale(0);
+                        z-index: -1; }
+                      .ui-button.ui-button--small.ui-button--tertiary:not(:active):after {
+                        -webkit-animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1);
+                                animation: ripple-small 0.6s cubic-bezier(0, 0, 0.4, 1); }
+                @media (min-width: 768px) {
+                  .ui-button {
+                    display: inline-block;
+                    width: auto;
+                    padding: 14px 24px;
+                    min-width: 142px; }
+                  .ui-button--small {
+                    display: inline-block;
+                    width: auto;
+                    padding: 8px;
+                    min-width: 108px; }
+                }
+
+      .app {
+
+      }
+
+      .container {
+          display: inline-block;
+          width: 350px;
+          padding: 50px 20px 70px;
+          height: 100%;
+      }
+
+      .container__gray {
+          background-color: #f6f6f6;
+      }
+
+      .container__white {
+          background-color: white;
+      }
+
+      .container__yellow {
+          background-color: #ffea78;
+      }
+
+      .img {
+          text-align: center;
+      }
+
+      .text {
+          font-family: "Proxima Nova";
+          color: #333333;
+          font-weight: 300;
+          font-size: 24px;
+          text-align: center;
+          margin: 5px auto 20px;
+          width: 240px;
+      }
+
+      .actions {
+
+      }
+
+      .actions .ui-button {
+          display: block;
+          margin: 8px auto;
+          width: 240px
+      }
+
+      .other-buttons {
+        text-align: center;
+      }
+
+      .other-buttons .ui-button {
+          display: block;
+          margin: 8px auto;
+          width: 240px
+      }
+
+      .b-disabled {
+        padding: 30px 0;
+        margin: 50px 0 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .other-buttons .ui-button.ui-button--small {
+          display: inline-block;
+          margin: 0 5px;
+          width: auto;
+      }
+
+      .other-buttons .ui-button.ui-button--small {
+          width: 108px;
+          display: inline-block;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="app">
+      <div class="container container__gray">
+        <div class="img">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M20 13.53v13.529H0V0h20z"/></defs><g fill="none" fill-rule="evenodd"><circle fill="#FFF" cx="32" cy="32" r="32"/><g transform="translate(22 19)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M20 9.55C20 4.276 15.522 0 10 0 4.48 0 0 4.276 0 9.55c0 5.274 10 17.509 10 17.509s10-12.235 10-17.51" fill="#3483FA" mask="url(#b)"/></g><path d="M32 24.637c-1.84 0-3.334 1.514-3.334 3.383 0 1.868 1.495 3.382 3.335 3.382 1.84 0 3.332-1.514 3.332-3.382 0-1.869-1.492-3.383-3.332-3.383" fill="#FFF"/></g></svg>
+        </div>
+        <div class="text"><span>¿Cómo quieres recibir el producto?<span></div>
+        <div class="actions">
+          <button class="ui-button ui-button--primary">Enviar a CP: 77000</button>
+          <button class="ui-button ui-button--secondary">Enviar a otra ubicación</button>
+          <button class="ui-button ui-button--tertiary">Retiro por OCA</button>
+        </div>
+        <div class="other-buttons">
+          <div class="b-disabled">
+            <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
+          </div>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--tertiary">Botón small</button>
+        </div>
+      </div>
+      <div class="container container__white">
+        <div class="img">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M20 13.53v13.529H0V0h20z"/></defs><g fill="none" fill-rule="evenodd"><circle fill="#F1F1F1" cx="32" cy="32" r="32"/><g transform="translate(22 19)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M20 9.55C20 4.276 15.522 0 10 0 4.48 0 0 4.276 0 9.55c0 5.274 10 17.509 10 17.509s10-12.235 10-17.51" fill="#3483FA" mask="url(#b)"/></g><path d="M32 24.637c-1.84 0-3.334 1.514-3.334 3.383 0 1.868 1.495 3.382 3.335 3.382 1.84 0 3.332-1.514 3.332-3.382 0-1.869-1.492-3.383-3.332-3.383" fill="#FFF"/></g></svg>
+        </div>
+        <div class="text"><span>¿Cómo quieres recibir el producto?<span></div>
+        <div class="actions">
+          <button class="ui-button ui-button--primary">Enviar a CP: 77000</button>
+          <button class="ui-button ui-button--secondary">Enviar a otra ubicación</button>
+          <button class="ui-button ui-button--tertiary">Retiro por OCA</button>
+        </div>
+        <div class="other-buttons">
+          <div class="b-disabled">
+            <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
+          </div>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--tertiary">Botón small</button>
+        </div>
+      </div>
+      <div class="container container__yellow">
+        <div class="img">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M20 13.53v13.529H0V0h20z"/></defs><g fill="none" fill-rule="evenodd"><circle fill="#3483FA" cx="32" cy="32" r="32"/><g transform="translate(22 19)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M20 9.55C20 4.276 15.522 0 10 0 4.48 0 0 4.276 0 9.55c0 5.274 10 17.509 10 17.509s10-12.235 10-17.51" fill="#FFF" mask="url(#b)"/></g><path d="M32 24.637c-1.84 0-3.334 1.514-3.334 3.383 0 1.868 1.495 3.382 3.335 3.382 1.84 0 3.332-1.514 3.332-3.382 0-1.869-1.492-3.383-3.332-3.383" fill="#3483FA"/></g></svg>
+        </div>
+        <div class="text"><span>¿Cómo quieres recibir el producto?<span></div>
+        <div class="actions">
+          <button class="ui-button ui-button--primary">Enviar a CP: 77000</button>
+          <button class="ui-button ui-button--secondary">Enviar a otra ubicación</button>
+          <button class="ui-button ui-button--tertiary">Retiro por OCA</button>
+        </div>
+        <div class="other-buttons">
+          <div class="b-disabled">
+            <button class="ui-button ui-button--disabled" disabled="diabled">Enviar a CP: 77000</button>
+          </div>
+          <button class="ui-button ui-button--small ui-button--primary">Botón small</button>
+          <button class="ui-button ui-button--small ui-button--tertiary">Botón small</button>
+        </div>
+      </div>
+    </div>
+
+  <script>
+  </script>
+  </body>
+</html>
